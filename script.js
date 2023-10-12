@@ -376,15 +376,120 @@ function task44b() {
     console.log("Tik skaičius (number tipo duomenis) ir prie jų pridėti 55:", numbersWith55);
 }
   
-task44b()
+// task44b()
 // 4.5. Tik skaičius (number tipo duomenis) ir juos padalinti iš 2.
+function task45a() {
+    let numbersWith55 = [];
+
+for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] === 'number' && !isNaN(array[i])) {
+        numbersWith55.push(array[i] / 2);
+    }
+}
+
+console.log("skaičius (number tipo duomenis) ir juos padalinti iš 2:", numbersWith55);
+  }
+  
+// task45a()
+  
+function task45b() {
+    let numbersWith55 = [];
+
+    array.forEach(function(element) {
+        if (typeof element === 'number' && !isNaN(element)) {
+            numbersWith55.push(element / 2);
+        }
+    });
+    
+    console.log("skaičius (number tipo duomenis) ir juos padalinti iš 2:", numbersWith55);
+}
+  
+// task45b()
 // 4.6. Tik skaičius (number tipo duomenis) ir prieš juos pridėti teksta, tokiu formatu: "Number: 2".
+function task46a() {
+    let formattedNumbers = [];
+
+for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] === 'number' && !isNaN(array[i])) {
+        formattedNumbers.push("Number: 2 " + array[i]);
+    }
+}
+
+console.log("skaičius (number tipo duomenis) ir prieš juos pridėti teksta, tokiu formatu: 'Number: 2':", formattedNumbers);
+  }
+  
+//  task46a()
+  
+function task46b() {
+    let formattedNumbers = [];
+
+array.forEach(function(element) {
+    if (typeof element === 'number' && !isNaN(element)) {
+        formattedNumbers.push("Number: 2 " + element);
+    }
+});
+
+console.log("skaičius (number tipo duomenis) ir prieš juos pridėti teksta, tokiu formatu: 'Number: 2':", formattedNumbers);
+}
+  
+// task46b()
 // 4.7. Tik skaičius (number tipo duomenis) ir pridėti tekstą su jų pačių indeksais, pvz.:
 //   "Index: 0, Number: 2"
 //   "Index: 1, Number: 3"
 //   "Index: 2, Number: 5"
 //   Ir t.t.
+function task47a() {
+    let formattedNumbersWithIndex = [];
+
+    for (let i = 0; i < array.length; i++) {
+        if (typeof array[i] === 'number' && !isNaN(array[i])) {
+            formattedNumbersWithIndex.push('Index: ' + i + ', Number: ' + array[i]);
+        }
+    }
+
+    console.log("skaičius (number tipo duomenis) ir pridėti tekstą su jų pačių indeksais:", formattedNumbersWithIndex);
+}
+// task47a()
+function task47b() {
+    let formattedNumbersWithIndex = [];
+
+    array.forEach(function(element, index) {
+        if (typeof element === 'number' && !isNaN(element)) {
+            formattedNumbersWithIndex.push(`Index: ${index}, Number: ${element}`);
+        }
+    });
+
+console.log("skaičius (number tipo duomenis) ir pridėti tekstą su jų pačių indeksais:", formattedNumbersWithIndex);
+}
+
+// task47b()
+
 // 4.8. Tik skaičius (number tipo duomenis) ir juos padauginti iš jų pačių indekso.
+function task48a() {
+    let multipliedNumbers = [];
+
+for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] === 'number' && !isNaN(array[i])) {
+        multipliedNumbers.push(array[i] * i);
+    }
+}
+
+console.log("skaičius (number tipo duomenis) ir juos padauginti iš jų pačių indekso", multipliedNumbers);
+}
+// task48a()
+function task48b() {
+    let multipliedNumbers = [];
+
+array.forEach(function(element, index) {
+    if (typeof element === 'number' && !isNaN(element)) {
+        multipliedNumbers.push(element * index);
+    }
+});
+
+console.log("skaičius (number tipo duomenis) ir juos padauginti iš jų pačių indekso:", multipliedNumbers);
+}
+
+// task48b()
 // 4.9. Tik skaičius (number tipo duomenis) ir juos padauginti iš ankstesnio nario, pvz.:
 //   - Pirmo skaičiaus dauginti nereikia.
 //   - Antrą skaičių dauginti iš pirmo.
